@@ -1,35 +1,55 @@
 # php-hello-world
 A simple hello-world for composer
 
- [![Latest Stable Version](https://github.com/silarhi/php-hello-world/workflows/Tests/badge.svg)](https://github.com/silarhi/php-hello-world/workflows/Tests/badge.svg)
- [![Latest Stable Version](https://poser.pugx.org/silarhi/hello-world/v/stable)](https://packagist.org/packages/silarhi/hello-world)
-[![Total Downloads](https://poser.pugx.org/silarhi/hello-world/downloads)](https://packagist.org/packages/silarhi/hello-world)
-[![License](https://poser.pugx.org/silarhi/hello-world/license)](https://packagist.org/packages/silarhi/hello-world)
-
-
-[![SymfonyInsight](https://insight.symfony.com/projects/5d582202-1186-4ce7-82c7-c4d3a2c11807/big.svg)](https://insight.symfony.com/projects/5d582202-1186-4ce7-82c7-c4d3a2c11807)
-
 Installation
 ------------
 
-Install with composer
+Inbrowser Demo
+--------------
+![Site Demo](https://github.com/sairajbudhathoki/powerworkshop-DevOps/blob/main/images/inbrowser.png?raw=true)
+
+Install Docker and Docker Compose
 ``` bash
-composer require silarhi/hello-world
+sudo apt install docker
+```
+``` bash
+sudo apt install docker.io
+```
+``` bash
+install docker-compose
 ```
 
-Run composer update
+Install Composer and use Docker Compose
+-------------
+
+Install Composer
 ``` bash
-composer update silarhi/hello-world
+composer Install
 ```
 
-Usage
------
+Run docker-compose.yml
+``` bash
+docker-compose up -d
+```
 
-``` php
-require_once __DIR__ . '/vendor/autoload.php';
 
-use Silarhi\Hello;
+Github Actions
+------------
+![Github Actions](https://github.com/sairajbudhathoki/powerworkshop-DevOps/blob/main/images/github_actions.png?raw=true)
 
-$hello = new Hello();
-echo $hello->display() . "\n";
+Docker Hub
+----------------
+![DockerHub](https://github.com/sairajbudhathoki/powerworkshop-DevOps/blob/main/images/imagepush.png?raw=true)
+
+Pushing Image to DockerHub
+``` bash
+docker login
+```
+
+``` bash
+docker build -t your_username/repository_name:tag .
+```
+
+``` bash
+docker push your_username/repository_name:tag
 ```
